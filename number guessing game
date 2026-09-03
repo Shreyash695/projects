@@ -4,6 +4,34 @@ class number
 public static void main(String[] args)
 {
 Scanner sc=new Scanner(System.in);
-
+int random=(int)(Math.random()*100)+1;
+int c=1;
+while(c<=5)
+{
+System.out.println("GUESS THE NUMBER FROM 1 TO 100");
+int n=sc.nextInt();
+if(n==random)
+{
+System.out.println("YOU WON");
+break;
+}
+else if(n>random)
+{
+System.out.println("HIGH");
+System.out.println(5-c+" chances remaining");
+c++;
+}
+else if(n<random)
+{
+System.out.println("LOW");
+System.out.println(5-c+" chances remaining");
+c++;
+}
+}
+if(c>5)
+{
+System.out.println("YOU LOST");
+System.out.println("THE NUMBER IS : "+random);
+}
 }
 }
