@@ -37,7 +37,12 @@ class Grade_Calculator
         System.out.println("TOTAL MARKS : "+total);
 
         System.out.println("PERCENTAGE : "+p);
-
+        if(m1<35 || m2<35 || m3<35 || m4<35 || m5<35)
+        {
+        }
+        else
+        {
+        System.out.println("PASS");
         if(p>=90.0)
 
         {
@@ -69,24 +74,8 @@ class Grade_Calculator
             System.out.println("GRADE : D");
 
         }
-
-        if(m1<35.0 || m2<35.0 || m3<35.0 || m4<35.0 || m5<35.0)
-
-        {
-
-           System.out.println("FAIL");
-
-        }
-
-        else
-
-        {
-
-            System.out.println("PASS");
-
-        }
+        }
 
     }
 
 }
-check
