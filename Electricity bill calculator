@@ -1,0 +1,39 @@
+import java.util.*;
+
+class Electricity_Bill_Calculator
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("ENTER ELECTRICITY UNITS CONSUMED");
+        double u = sc.nextDouble();
+
+        double b = 0.0;
+
+        if(u <= 100)
+        {
+            b = u * 2.0;
+        }
+        else if(u <= 200)
+        {
+            b = (100 * 2.0) + ((u - 100) * 3.0);
+        }
+        else if(u <= 300)
+        {
+            b = (100 * 2.0) + (100 * 3.0) + ((u - 200) * 5.0);
+        }
+        else
+        {
+            b = (100 * 2.0) + (100 * 3.0) + (100 * 5.0)
+                + ((u - 300) * 7.0);
+        }
+
+        if(b > 1000)
+        {
+            b = b + (b * 0.1);
+        }
+
+        System.out.println("TOTAL BILL : " + b);
+    }
+}
