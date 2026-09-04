@@ -1,0 +1,37 @@
+import java.util.*;
+class p1
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("ENTER 1 FOR ADDITION");
+        System.out.println("ENTER 2 FOR SUBTRACTION");
+        System.out.println("ENTER 3 FOR MULTIPLICATION");
+        System.out.println("ENTER 4 FOR DIVISION");
+        System.out.println("ENTER TWO NUMBERS");
+        double a=sc.nextDouble();
+        double b=sc.nextDouble();
+        System.out.println("ENTER YOUR CHOICE");
+        int x=sc.nextInt();
+        switch(x)
+        {
+            case 1: double s=0.0;
+            s=a+b;
+            System.out.println("ADDITION OF GIVEN NUMBERS : "+s);
+            break;
+            case 2: double m=0.0;
+            m=a-b;
+            System.out.println("SUBTRACTION OF GIVEN NUMBERS : "+m);
+            break;
+            case 3: double p=1.0;
+            p=a*b;
+            System.out.println("MULTIPLICATION OF GIVEN NUMBERS : "+p);
+            break;
+            case 4: double d=0.0;
+            d=a/b;
+            System.out.println("DIVISION OF GIVEN NUMBERS : "+d);
+            break;
+            default:System.out.println("ENTER VALID INPUT");
+        }
+    }
+}
