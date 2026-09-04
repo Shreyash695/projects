@@ -1,0 +1,118 @@
+import java.util.*;
+
+class P4
+
+{
+
+    public static void main(String[] args)
+
+    {
+
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("ENTER YOUR ACCOUNT NUMBER");
+
+        int n=sc.nextInt();
+
+        System.out.println("ENTER YOUR PIN");
+
+        int pin=sc.nextInt();
+
+        System.out.println("ENTER YOUR BALANCE");
+
+        double b=sc.nextDouble();
+
+        
+        if(pin==1554 && n=9677633000)
+
+        {
+
+        System.out.println("ENTER 1 TO SEE YOUR BALANCE");
+
+        System.out.println("ENTER 2 FOR DEPOSIT MONEY");
+
+        System.out.println("ENTER 3 FOR WITHDRAW MONEY");
+
+        System.out.println("ENTER 4 TO EXIT");
+
+        System.out.println("ENTER YOUR CHOICE");
+
+        int x=sc.nextInt();
+
+        switch(x)
+
+        {
+
+            case 1: System.out.println("YOUR BALANCE : "+ b);
+
+                     break;
+
+            case 2: System.out.println("ENTER AMOUNT TO BE DEPOSIT");
+
+            double d=sc.nextDouble();
+
+            if(d>0)
+
+            {
+
+                b=b+d;
+
+                System.out.println("UPDATED BALANCE : "+b);
+
+            }
+
+            else
+
+            {
+
+                System.out.println("ENTER VALID AMOUNT");
+
+            }
+
+            break;
+
+            case 3: System.out.println("ENTER AMOUNT TO BE WITHDRAW");
+
+            double w=sc.nextDouble();
+
+            if(w>0 && w<=b)
+
+            {
+
+                b=b-w;
+
+                System.out.println("UPDATED BALANCE : "+b);
+
+            }
+
+            else
+
+            {
+
+                System.out.println("ENTER VALID AMOUNT");
+
+            }
+
+            break;
+
+            case 4: System.exit(0);
+
+            break;
+
+            default:System.out.println("ENTER VALID CHOICE");
+
+        }
+
+        }
+
+        else
+
+        {
+
+            System.out.println("INVALID PIN OR ACCOUNT NUMBER");
+
+        }
+
+    }
+
+}
