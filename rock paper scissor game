@@ -1,0 +1,50 @@
+import java.util.*;
+class P1
+  {
+    public static void main(String[] args)
+    {
+      Scanner sc=new Scanner(System.in);
+      System.out.println("CHOOSE 1 FOR ROCK");
+      System.out.println("CHOOSE 2 FOR PAPER");
+      System.out.println("CHOOSE 3 FOR SCISSOR");
+      int bc=0,uc=0;int c=1;
+      while(c<=5)
+        {
+          System.out.println("ENTER YOUR CHOICE");
+      int n=sc.nextInt();
+      int botchoice=(int)(Math.random()*3)+1;
+           System.out.println("ROUND : "+c);
+          if(n==botchoice)
+          {
+             System.out.println("TIE");
+            bc++;
+            uc++;
+          }
+          else if(botchoice==1 && n==2 || botchoice==2 && n==3 || botchoice==3 && n==1 )//all user win scenerios
+          {
+             System.out.println("YOU WIN");
+            uc++;//user win counter
+          }
+          else
+          {
+             System.out.println("YOU LOST");
+            bc++;//system win counter
+          }
+          c++;//round counter
+        }
+      if(uc>bc)
+      {
+         System.out.println("YOU WON");
+         System.out.println("SCORE : "+uc);
+      }
+      else if(bc>uc)
+      {
+         System.out.println("BOT WON");
+         System.out.println("SCORE : "+bc);
+      }
+      else
+      {
+         System.out.println("TIE");
+      }
+    }
+  }
