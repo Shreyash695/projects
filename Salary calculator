@@ -1,0 +1,25 @@
+import java.util.*;
+
+class Salary_Calculator 
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("ENTER YOUR BASIC SALARY");
+        double bs = sc.nextDouble();
+
+        double hra = bs * 0.20;
+        double da = bs * 0.10;
+        double gs = bs + hra + da;
+        double pf = bs * 0.05;
+        double ns = gs - pf;
+
+        System.out.println("BASIC SALARY : " + bs);
+        System.out.println("HRA : " + hra);
+        System.out.println("DA : " + da);
+        System.out.println("GROSS SALARY : " + gs);
+        System.out.println("PF : " + pf);
+        System.out.println("NET SALARY : " + ns);
+    }
+}
